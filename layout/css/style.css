@@ -1,0 +1,197 @@
+.navbar-default {
+  background: none;
+  border: none;
+}
+.navbar-brand {
+  width: 100%;
+  height: 100%;
+  padding-top: 0px;
+  margin-left: -35px !important;
+}
+.navbar-brand img {
+  width: 100%;
+}
+.navbar-brand.hidden-lg {
+  width: 70%;
+  margin-left: 0px !important;
+}
+.navbar {
+  margin-bottom: 0px;
+}
+.navbar-toggle {
+  margin-top: 5%;
+}
+.navbar-nav {
+  margin-top: 70px;
+}
+@media (max-width: 767px) {
+  .nm-header {
+    height: 100% !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  .nm-nav.hidden-xs {
+    margin-top: 14px;
+    margin-left: 23%;
+    float: left !important;
+  }
+}
+.nm-pills.nav-pills li a {
+  text-transform: uppercase;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: #8e8e8e;
+}
+.nm-pills.nav-pills li.active a {
+  color: #de0029;
+  background-color: transparent;
+}
+body.nm {
+  background: url('../../images/bg.png') repeat;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.nm-container {
+  background-image: url('../../images/header-bg.png');
+  background-repeat: no-repeat;
+}
+header.nm-header {
+  height: 161px;
+}
+.nm-header .nm-nav li {
+  font-size: 11px;
+  text-transform: uppercase;
+  border-right: 1px solid #626161;
+}
+.nm-header .nm-nav li a {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+.nm-header .nm-nav li:last-child {
+  border-right: none !important;
+}
+section {
+  height: 100%;
+}
+footer.nm {
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+  background-color: #434343;
+}
+footer.nm > div {
+  width: 100%;
+  color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 3px;
+  padding-bottom: 5px;
+}
+footer.nm > div span {
+  font-size: 10px;
+  text-align: center;
+  color: #fff;
+  margin-right: 15px;
+  letter-spacing: 0.1em;
+}
+.nm-email-add {
+  text-transform: lowercase !important;
+}
+footer.nm > .hidden-lg > div {
+  font-size: 10px !important;
+  letter-spacing: 0.1em;
+}
+.active-menu {
+  color: #de0029 !important;
+}
+.col-md-4 > .nm-home-article {
+  height: 163px;
+  padding: 1px 14px 1px 14px;
+  box-shadow: 1px 3px 10px 3px #ccc;
+  background: #f85032;
+  background: -moz-linear-gradient(25deg, #ffffff 50%, #ededed 50%);
+  background: -webkit-gradient(left bottom, right top, color-stop(50%, #ffffff), color-stop(50%, #ededed));
+  background: -webkit-linear-gradient(25deg, #ffffff 50%, #ededed 50%);
+  background: -o-linear-gradient(25deg, #ffffff 50%, #ededed 50%);
+  background: -ms-linear-gradient(25deg, #ffffff 50%, #ededed 50%);
+  background: linear-gradient(25deg, #ffffff 50%, #ededed 50%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#ededed', GradientType=1);
+}
+.nm-home-article > div {
+  height: 75%;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.nm-home-article > div > h1 {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-family: 'Helvetica-Light-NM';
+  color: #076a91;
+  margin-top: 10px;
+}
+.nm-home-article > div > p {
+  font-size: 12px;
+  color: #076a91;
+}
+.nm-readmore-btn {
+  width: 114px;
+  height: 25px;
+  display: block;
+  float: right;
+  background: url('../../images/readmore-button.png') right no-repeat;
+}
+.nm-float-cleaner {
+  width: 100%;
+  clear: both;
+}
+.nm-brands {
+  margin-top: 60px;
+}
+.nm-brands img {
+  margin: 0 auto;
+}
+.navbar-right.visible-xs {
+  margin-top: 0px;
+}
+.nm-arial-font {
+  font-family: Arial, sans-serif;
+}
+.nm-helvetica-normal-font {
+  font-family: 'Helvetica-Regular-NM';
+}
+.nm-helvetica-light-font {
+  font-family: 'Helvetica-Light-NM';
+}
+.nm-helvetica-bold-font {
+  font-family: 'Helvetica-Bold-NM';
+}
+.nm-myriad-font {
+  font-family: 'Myriad-NM';
+}
+.nm-bebas-kai-font {
+  font-family: 'BebasKai-NM';
+}
+@font-face {
+  font-family: 'Helvetica-Bold-NM';
+  src: url("../fonts/Helvetica-Bold.ttf");
+}
+@font-face {
+  font-family: 'Myriad-NM';
+  src: url("../fonts/MyriadPro-Regular.otf");
+}
+@font-face {
+  font-family: 'BebasKai-NM';
+  src: url("../fonts/BebasKai.otf");
+}
+@font-face {
+  font-family: 'Helvetica-Regular-NM';
+  src: url("../fonts/Helvetica.ttf");
+}
+@font-face {
+  font-family: 'Helvetica-Light-NM';
+  src: url("../fonts/Helvetica-Light.ttf");
+}

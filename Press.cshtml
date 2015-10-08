@@ -1,0 +1,220 @@
+﻿@{
+    Layout = "~/layout/_base.cshtml";
+
+    List<string> lstPrintPR = new List<string>()
+    {
+        "(1) Racumin Advertorial.jpg|Racumin Advertorial",
+        "(2) Racumin Advertorial.jpg|Racumin Advertorial",
+        "(3) Racumin Advertorial.jpg|Racumin Advertorial",
+        "(4) Racumin Advertorial.jpg|Racumin Advertorial",
+        "(5) Racumin Advertorial.jpg|Racumin Advertorial",
+        "Gaby.jpg|Blattanex Cockroach Gel Print Ad",
+        "ratattack advertorial.jpg|Racumin Advertorial",
+        "Tessa.jpg|Blattanex Cockroach Gel Print Ad",
+        "Victor.jpg|Blattanex Cockroach Gel Print Ad"
+    };
+    List<string> lstOOH = new List<string>()
+    {
+        "Advanced Mosquito Killer Billboard-NLEX.jpg|Advanced Mosquito Killer Billboard-NLEX",
+        "Advanced Multi-Insect Killer _Hotel_ Bus Ad.png|Advanced Multi-Insect Killer \"Hotel\" Bus Ad",
+        "Advanced Multi Insect Killer _Resto_ Bus Ad.png| Advanced Multi-Insect Killer \"Resto\" Bus Ad",
+        "Advanced Multi- Insect Killer _School_ Bus Ad.png|Advanced Multi-Insect Killer \"School\" Bus Ad"
+    };
+    List<string> lstEvent = new List<string>()
+    {
+        "Davao1.jpg|Davao",
+        "Davao2.jpg|Davao",
+        "Davao3.jpg|Davao",
+        "Davao4.jpg|Davao",
+        "Davao5.jpg|Davao",
+        "Mandaluyong.jpg|Mandaluyong",
+        "Marikina.jpg|Marikina",
+        "Olongapo 2.jpg|Olongapo",
+        "Pampanga.jpg|Pampanga",
+    };
+}
+@section styles{
+    <style type="text/css">
+        section {
+            min-height: 200px;
+            height: 500px;
+        }
+
+        .tab-pane div {
+            width: 110px;
+            height: 110px;
+            overflow: hidden;
+            padding-top: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+            .tab-pane div img {
+                width: 120%;
+            }
+
+        .nm-pills li a {
+            padding-left: 11px !important;
+            padding-right: 11px !important;
+        }
+
+        .nm-prprint {
+            margin-top: 20px;
+        }
+
+        h2.nm-bebas-kai-font {
+            font-size: 22px;
+            color: #626161;
+        }
+
+        .nm-gray {
+            color: #8e8e8e;
+            font-size: 13px;
+        }
+    </style>
+}
+@section scripts{
+    <script>
+        $('.mnuPress').addClass('active-menu');
+        $(document).ready(function () {
+            $('.nav-pills a').click(function (e) {
+                e.preventDefault();
+                $(this).tab('show');
+            });
+            $('.nm-tvc').click(function (e) {
+                e.preventDefault();
+                $('.nm-preview').hide();
+                $('.nm-yt').show();
+                var id = $(this).data('video');
+                var title = $(this).children('input[type="hidden"]').val();
+                $('.nm-yt').find("> figcaption > header > h2").text(title);
+                $('#nm-iframe').attr('src', 'https://www.youtube.com/embed/' + id);
+            });
+            $('.nm-pr').click(function (e) {
+                e.preventDefault();
+                $('.nm-preview').hide();
+                $('.nm-prprint').show();
+                var text = $(this).data('figure');
+                $('.nm-prprint').find("> figcaption > header > h2").text(text);
+                var description = $(this).data('description');
+                if (description != undefined) {
+                    description = description.replace("|", "<br/><br/>");
+                }
+                else {
+                    description = '';
+                }
+                $('.nm-prprint').find("> figcaption > p").html(description);
+                $('.nm-prprint').find("> div > img").attr('src', $(this).children('img').attr('src'));
+            });
+            $('.nm-tvc').eq(0).click();
+        });
+    </script>
+}
+<div class="row">
+    <div style="width:93%;margin:40px auto;">
+        <article class="col-lg-4 col-lg-push-8">
+            <ul class="nav nm-pills nav-pills">
+                <li role="presentation" class="active"><a href="#tvc">Tv</a></li>
+                <li role="presentation"><a href="#radio">Radio</a></li>
+                <li role="presentation"><a href="#print">Print & PR</a></li>
+                <li role="presentation"><a href="#ooh">Outdoor</a></li>
+                <li role="presentation"><a href="#event">Event</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="tvc">
+                    <div class="nm-tvc col-xs-6 col-md-3" data-video="44hBGyL1TIE">
+                        <img src="http://img.youtube.com/vi/44hBGyL1TIE/0.jpg" />
+                        <input type="hidden" value="Advanced Multi-Insect Killer &quot;Too Less&quot;">
+                    </div>
+                    <div class="nm-tvc col-xs-6 col-md-3" data-video="lmwnpS-iemQ">
+                        <img src="http://img.youtube.com/vi/lmwnpS-iemQ/0.jpg" />
+                        <input type="hidden" value="Advanced Mosquito Killer &quot;Super Villain&quot;">
+                    </div>
+                    <div class="nm-tvc col-xs-6 col-md-3" data-video="HkMGgt9KqlM">
+                        <img src="http://img.youtube.com/vi/HkMGgt9KqlM/0.jpg" />
+                        <input type="hidden" value="Racumin &quot;Sleeping Baby&quot;" />
+                    </div>
+                    <div class="nm-tvc col-xs-6 col-md-3" data-video="sADptpry1go">
+                        <img src="http://img.youtube.com/vi/sADptpry1go/0.jpg" />
+                        <input type="hidden" value="Racumin &quot;Burglar&quot;" />
+                    </div>                    
+                </div>
+                <div role="tabpanel" class="tab-pane" id="radio">
+                    <div class="nm-tvc col-xs-6 col-md-3" data-video="vuwoHmDioNQ">
+                        <img src="http://img.youtube.com/vi/vuwoHmDioNQ/0.jpg" />
+                        <input type="hidden" value="Advanced Multi-Insect Killer &quot;Too Less&quot; ">
+                    </div>
+                    <div class="nm-tvc col-xs-6 col-md-3" data-video="JhbQyU2SRWM">
+                        <img src="http://img.youtube.com/vi/JhbQyU2SRWM/0.jpg" />
+                        <input type="hidden" value="Racumin &quot;Ratattack Jingle&quot; ">
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="print">
+                    @{
+                        foreach (var item in lstPrintPR)
+                        {
+                            var fileInfo = item.Split('|');
+                            var path = "images/press/pr/" + fileInfo[0];
+                            <div class="nm-pr col-xs-6 col-md-3" data-figure="@fileInfo[1]">
+                                <img src="@path" />
+                            </div>
+                        }
+                    }
+                </div>
+                <div role="tabpanel" class="tab-pane" id="ooh">
+                    @{
+                        foreach (var item in lstOOH)
+                        {
+                            var fileInfo = item.Split('|');
+                            var path = "images/press/ooh/" + fileInfo[0];
+                            <div class="nm-pr col-xs-6 col-md-3" data-figure="@fileInfo[1]">
+                                <img src="@path" />
+                            </div>
+                        }
+                    }
+                </div>
+                <div role="tabpanel" class="tab-pane" id="event">
+                    <div class="nm-pr col-xs-6 col-md-3" data-figure="RATATTACK CAMPAIGN"
+                         data-description="RatAttack, a nationwide community-based information drive about health risks posed by rodent infestations, is aimed to teach citizens how to manage rat population and avoid diseases caused by these infestations. Community lectures on rodent behavior, the health risks associated with it and how to avoid rat invasions were the main topics covered by the event. With the support of city and barangay offices, Racumin was also able to organize raids with residents and local authorities in key areas that are prone to rodent infestation.">
+                        <img src="images/press/event/ratatackevent/Racumin Ratatack Event.jpg" />
+                    </div>
+                    @{
+                        foreach (var item in lstEvent)
+                        {
+                            var data = item.Split('|');
+                            var path = "images/press/event/ratatackevent/" + data[0];
+                            <div class="nm-pr col-xs-6 col-md-3" data-figure="@data[1]">
+                                <img src="@path" />
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </article>
+        <div style="clear:both;" class="visible-xs"></div>
+        <article class="col-lg-8 col-lg-pull-4">
+            <figure class="nm-preview nm-yt">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe id="nm-iframe" class="embed-responsive-item" src=""></iframe>
+                </div>
+                <figcaption>
+                    <header>
+                        <h2 class="nm-bebas-kai-font">&nbsp;</h2>
+                    </header>
+                    <p>&nbsp;</p>
+                </figcaption>
+            </figure>
+            <figure class="nm-preview nm-prprint">
+                <div>
+                    <img class="img-responsive" />
+                </div>
+                <figcaption>
+                    <header>
+                        <h2 class="nm-bebas-kai-font">&nbsp;</h2>
+                    </header>
+                    <p class="nm-helvetica-normal-font nm-gray text-justify">&nbsp;</p>
+                </figcaption>
+            </figure>
+        </article>
+    </div>
+</div>

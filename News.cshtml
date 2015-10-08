@@ -1,0 +1,102 @@
+﻿@{
+    Layout = "~/layout/_base.cshtml";
+    var totalPages = 0;
+    var displayPerPage = 3;
+    
+}
+@section styles{
+    <style type="text/css">
+        .col-lg-10 > header > h1 {
+            font-family: 'BebasKai-NM';
+            font-size: 41px;
+            color: #626161;
+            margin-top:40px;
+            margin-bottom:40px;
+        }
+        .nm-readmore-btn{
+            margin-top:50px;
+            margin-bottom:30px;
+        }
+        .row-fluid{
+            width:90%;
+            margin:0 auto;  
+        } 
+        .row-fluid article {
+            border-bottom: 1px solid #626161;
+        }
+
+        article{
+            height:auto;
+            overflow:hidden;
+        }
+        .nm-news-nav {
+            background-color: #59e6ff;
+            height:38px;
+            margin-bottom:20px;
+        }
+        .pagination{
+            margin-top:0px;            
+            height:100%;
+        }
+            .pagination > li > a {
+                border: none;
+                color: #fff;
+                padding: 8px 12px;
+                background-color: transparent;
+                font-family: 'BebasKai-NM';
+                font-size:15px;
+            }
+            .pagination > li:last-child > a {
+                border-top-right-radius:0px;
+                border-bottom-right-radius:0px;
+            }
+            
+            
+             .row-fluid article:last-child {
+                border-bottom: none;
+            }
+        .pagination > li:first-child > a {
+            border-top-left-radius: 0px;
+            border-bottom-left-radius:0px;
+        }
+    </style>    
+}
+@section scripts{
+    <script>
+        $('.mnuNews').addClass('active-menu');
+    </script>
+}
+<div class="row-fluid">
+   
+    <article>
+        <div class="col-lg-10">
+            <header>
+                <h1>Keeping Insect Home Invaders Away – Sans the Unpleasant Odor</h1>
+            </header>            
+        </div>
+        <div class="col-lg-2">
+            <a target="_blank" href="http://www.philstar.com/science-and-technology/707865/keeping-insect-home-invaders-away-sans-unpleasant-odor" class="nm-readmore-btn"></a>
+        </div>
+    </article>  
+    <article>
+        <div class="col-lg-10">
+            <header>
+                <h1>The Smart Way to Get Rid of Rats</h1>
+            </header>
+        </div>
+        <div class="col-lg-2">
+            <a target="_blank" href="http://www.philstar.com:8080/science-and-technology/48509/smart-way-get-rid-rats" class="nm-readmore-btn"></a>
+        </div>
+    </article>  
+    <article>
+        <div class="col-lg-10">
+            <header>
+                <h1>Controlling Fleas and Ticks on your Pet</h1>
+            </header>
+        </div>
+        <div class="col-lg-2">
+            <a target="_blank" href="http://animalhealth.bayer.com/ah/index.html" class="nm-readmore-btn"></a>
+        </div>
+    </article>    
+</div>
+<div class="clearfix"></div>

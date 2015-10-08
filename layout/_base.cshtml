@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Neumann & Mueller</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Neumann & Mueller Philippines, Inc. is the exclusive distributor and marketing arm of Bayer Environmental Science in the Philippines. It was established in 2003 to handle the distribution of Racumin rodenticides and Blattanex insecticides in consumer retail accounts nationwide. Together with NMPI, Racumin has since remained to be the market leader in rodenticides in the Philippines. In 2007, NMPI expanded its distribution portfolio and product expertise when Bayer Animal Health appointed it as the exclusive national distributor for its pet care brand Bayopet.
+          In addition to these products, NMPI currently distributes and markets its own line of pest control brands such as Advanced Aerosols, Advanced Chalk and Banzai. All of which are strong and unique brands in pest control.
+          The core of NMPI is its strong distribution network nationwide. It is backed-up by several sub-distributors strategically located in key cities and provinces throughout the country which cover supermarkets, groceries, drugstores, convenience stores, wholesalers, sari-sari and market stalls, hardware and do-it-yourself stores, poultry and agricultural supply stores, pet stores and other tertiary accounts.
+          With its growing number of top-of-the-line products, NMPI continues to live up to its reputation as the go-to experts for pest control and pet care, making life pest-less for people and their pets.">
+    <meta name="keywords" content="pest control, do it yourself pest control, diy pest control, do my own pest control, pest control, animal control, pest control products, household pests, pets, pet health, pet health information, pet care">
+    <meta name="author" content="Garry Quilala, Mark Edison Khu">
+
+    <link href="~/layout/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/layout/css/style.css" rel="stylesheet" />
+    @RenderSection("styles",false)
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="nm">
+    <div class="nm-container container">
+        <header class="nm-header">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">                
+                    <div class="navbar-header navbar-left">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand visible-lg" href="~/">
+                            <img src="~/images/logo.png" />
+                        </a>
+                        <a class="navbar-brand hidden-lg" href="~/">
+                            <img src="~/images/logo.png" />
+                        </a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">                       
+                        <ul class="nav navbar-nav navbar-right nm-nav hidden-xs">
+                            <li><a class="mnuHome" href="~/">Home</a></li>
+                            <li><a class="mnuAbout" href="~/AboutUs.cshtml">About</a></li>
+                            <li><a class="mnuProduct" href="~/Products.cshtml">Products</a></li>
+                            <li><a class="mnuPress" href="~/Press.cshtml">Press</a></li>
+                            <li><a class="mnuNews" href="~/News.cshtml">News</a></li>
+                            <li><a class="mnuContact" href="~/ContactUs.cshtml">Contact us</a></li>        
+                        </ul>  
+                        <ul class="nav navbar-nav navbar-right visible-xs">
+                            <li><a class="mnuHome" href="~/">Home</a></li>
+                            <li><a class="mnuAbout" href="~/AboutUs.cshtml">About</a></li>
+                            <li><a class="mnuProduct" href="~/Products.cshtml">Products</a></li>
+                            <li><a class="mnuPress" href="~/Press.cshtml">Press</a></li>
+                            <li><a class="mnuNews" href="~/News.cshtml">News</a></li>
+                            <li><a class="mnuContact" href="~/ContactUs.cshtml">Contact us</a></li>
+                        </ul>          
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section>
+            @RenderBody()
+            <footer class="nm">
+                <div class="visible-lg">
+                    <span>Unit 2106 Atlanta Centre No. 31 Annapolis Street, Greenhills San Juan City, 1502 Philippines</span>                    
+                    <span>email: <span class="nm-email-add">customercare@neumann.com.ph</span></span>
+                </div>
+                <div class="row hidden-lg">
+                    <div class="col-lg-12 text-left">Unit 2106 Atlanta Centre<br/>No. 31 Annapolis Street,<br/>Greenhills San Juan City,<br/>1502 Philippines</div>
+                    <div class="col-lg-12 text-left">email: <span class="nm-email-add">customercare@neumann.com.ph</span></div>
+                </div>
+            </footer>
+        </section>
+        
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="~/scripts/bootstrap.min.js"></script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-67010566-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    @RenderSection("scripts",false)
+</body>
+</html>
