@@ -1,13 +1,14 @@
 ﻿@{
     Layout = "~/layout/_base.cshtml";
     var txtName = Request["txtName"];
+    var txtEmail = Request["txtEmail"];
     var txtSubject = Request["txtSubject"];
     var txtMessage = Request["txtMessage"];
     if (IsPost)
     {
         try
         {
-            WebMail.Send("garryquilala@live.com", txtSubject, txtName + txtMessage, "ianacelim@gmail.com");
+            WebMail.Send("customercare@neumann.com.ph", txtSubject, "From: " + txtName + " (" + txtEmail + ")" + "<br><br>" + txtMessage, "test.nmpi@helpdesk.ph", null, null, true);
             <div class="alert alert-success">
                 <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                 <strong>Successful!</strong> The request has been sent succesfully.
@@ -15,48 +16,61 @@
             txtName = "";
             txtSubject = "";
             txtMessage = "";
+            txtEmail = "";
         }
         catch (Exception ex)
         {
             <div class="alert alert-danger">
                 <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                <strong>Failed!</strong> There is an error on your request.
+                <strong>Failed!</strong> There is an error on your request. @ex.ToString()
             </div>
         }
     }
 
 }
+@section styles{
+    <style type="text/css">
+        p {
+            font-family: 'Helvetica-Regular-NM';
+            font-size: 14px;
+        }
+    </style>
+}
 @section scripts{
     <script>
         $('.mnuContact').addClass('active-menu');
     </script>
-    
+
 }
 
-    <form method="post" role="form" class="form-horizontal">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <h4>Have questions? Let us know.</h4>
-                    <div class="form-group">
-                        @*<label for="txtName">Name:</label>*@<input name="txtName" type="text" value="@txtName" required class="form-control" placeholder="Name" style="margin-bottom:10px;" />
-                        @*<label for="txtSubject">Subject:</label>*@<input name="txtSubject" type="text" value="@txtSubject" required class="form-control" placeholder="Subject" style="margin-bottom:10px;" />
-                        @*<label for="txtMessage">Message:</label>*@<textarea name="txtMessage" cols="25" rows="7" value="@txtMessage" required class="form-control" placeholder="Message" style="margin-bottom:10px;"></textarea>
-                        <input type="submit" value="Submit" class="btn btn-info btn-md" />
-                    </div>
+<form method="post" role="form" class="form-horizontal">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h4 class="nm-helvetica-normal-font" style="font-size:18px; color:#626262;">Have questions? Let us know.</h4>
+                <div class="form-group">
+                    @*<label for="txtName">Name:</label>*@<input name="txtName" type="text" value="@txtName" required class="form-control" placeholder="Name" style="margin-bottom:10px;" />
+                    <input name="txtEmail" type="email" value="@txtEmail" required class="form-control" placeholder="Email" style="margin-bottom:10px;" />
+                    @*<label for="txtSubject">Subject:</label>*@<input name="txtSubject" type="text" value="@txtSubject" required class="form-control" placeholder="Subject" style="margin-bottom:10px;" />
+                    @*<label for="txtMessage">Message:</label>*@<textarea name="txtMessage" cols="25" rows="7" value="@txtMessage" required class="form-control" placeholder="Message" style="margin-bottom:10px;"></textarea>
+                    <input type="submit" value="Submit" class="btn btn-info btn-md" />
                 </div>
-                <div class="col-lg-6">
-                    <div>
-                        <h2>Contact Us</h2>
-                        <p style="width:150px;">Unit 2105 06 Atlanta Centre #31 Annapolis St., Greenhills San Juan City 1502 Philippines</p>
-                    </div>
-                    <div style="padding-top:10px;">
-                        <p><span class="glyphicon glyphicon-earphone"></span> (632) 721-9800; 721-6529</p>
-                        <p><span class="glyphicon glyphicon-print"></span> (632) 723-3182</p>
-                        <p><span class="glyphicon glyphicon-envelope"></span> gma-sales@neumann.com.ph</p>
-                        <iframe width="300" height="250" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=unit%202105%20atlanta%20centre%20%2331%20annapolis%20st.%20greenhills%20san%20juan%20city%201502%20Philippines&key=AIzaSyCSBkP6fm8pVtKMB0XdbXK0ZYk3Mw23TkU" allowfullscreen></iframe>
-                    </div>
+            </div>
+            <div class="col-lg-6">
+                <div>
+                    <h2 class="nm-bebas-kai-font" style="font-size:40px; color:#626262;">Contact Us</h2>
+                    <p style="margin-bottom:0px;">Unit 2106 Atlanta Centre </p>
+                    <p style="margin-bottom:0px;">31 Annapolis Street</p>
+                    <p style="margin-bottom:0px;">Greenhills, San Juan City 1502</p>
+                    <p style="margin-bottom:0px;">Philippines</p>
+                </div>
+                <div style="padding-top:10px;">
+                    @*<p><span class="glyphicon glyphicon-earphone"></span> (632) 721-9800; 721-6529</p>
+                        <p><span class="glyphicon glyphicon-print"></span> (632) 723-3182</p>*@
+                    <p><span class="glyphicon glyphicon-envelope"></span> <a href="mailto:customercare@neumann.com.ph"> customercare@neumann.com.ph</a></p>
+                    <iframe width="300" height="250" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=unit%202105%20atlanta%20centre%20%2331%20annapolis%20st.%20greenhills%20san%20juan%20city%201502%20Philippines&key=AIzaSyCSBkP6fm8pVtKMB0XdbXK0ZYk3Mw23TkU" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
-    </form>
+    </div>
+</form>
