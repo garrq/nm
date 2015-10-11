@@ -50,6 +50,7 @@
 body.nm {
   background: url('../../images/bg.png') repeat;
   font-family: Helvetica, Arial, sans-serif;
+  margin-bottom: 40px;
 }
 .nm-container {
   background-image: url('../../images/header-bg.png');
@@ -59,7 +60,7 @@ header.nm-header {
   height: 161px;
 }
 .nm-header .nm-nav li {
-  font-size: 13px;
+  font-size: 12.5px;
   text-transform: uppercase;
   border-right: 1px solid #626161;
 }
@@ -75,41 +76,12 @@ header.nm-header {
 section {
   height: 100%;
 }
-footer.nm {
-  width: 100%;
-  height: auto;
-  margin-top: 50px;
-  background-color: #434343;
-}
-footer.nm > div {
-  width: 100%;
-  color: #fff;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  padding-top: 3px;
-  padding-bottom: 5px;
-}
-footer.nm > div span {
-  font-size: 10px;
-  text-align: center;
-  color: #fff;
-  margin-right: 15px;
-  letter-spacing: 0.1em;
-}
-.nm-email-add {
-  text-transform: lowercase !important;
-}
-footer.nm > .hidden-lg > div {
-  font-size: 10px !important;
-  letter-spacing: 0.1em;
-}
 .active-menu {
   color: #de0029 !important;
 }
 .col-md-4 > .nm-home-article {
-  height: 163px;
-  padding: 1px 14px 1px 14px;
+  height: 135px;
+  padding: 8px 7px 0px 9px;
   box-shadow: 1px 3px 10px 3px #ccc;
   background: #f85032;
   background: -moz-linear-gradient(25deg, #ffffff 50%, #ededed 50%);
@@ -120,22 +92,8 @@ footer.nm > .hidden-lg > div {
   background: linear-gradient(25deg, #ffffff 50%, #ededed 50%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#ededed', GradientType=1);
 }
-.nm-home-article > div {
-  height: 75%;
-  font-family: Helvetica, Arial, sans-serif;
-}
-.nm-home-article > div > h1 {
-  font-size: 22px;
-  font-weight: bold;
-  line-height: 30px;
-  text-transform: uppercase;
-  font-family: 'Helvetica-Light-NM';
-  color: #076a91;
-  margin-top: 10px;
-}
-.nm-home-article > div > p {
-  font-size: 12px;
-  color: #076a91;
+.nm-home-article > div > img {
+  width: 100%;
 }
 .nm-readmore-btn {
   width: 114px;
@@ -143,6 +101,9 @@ footer.nm > .hidden-lg > div {
   display: block;
   float: right;
   background: url('../../images/readmore-button.png') right no-repeat;
+  position: relative;
+  top: -27px;
+  margin-right: 8px;
 }
 .nm-float-cleaner {
   width: 100%;
