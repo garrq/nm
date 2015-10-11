@@ -2,101 +2,118 @@
     Layout = "~/layout/_base.cshtml";
     var totalPages = 0;
     var displayPerPage = 3;
-    
+    var news = new List<string>()
+    {
+        "Deadly Leptospirosis and other rat-borne diseases: A community fights back|http://www.philstar.com/science-and-technology/2012/08/16/838601/deadly-leptospirosis-and-other-rat-borne-diseases-community ",
+        "RatAttack goes to Davao City barangay.|http://www.philstar.com/science-and-technology/2012/10/11/858162/ratattack-goes-davao-city-barangay",
+        "Fighting dengue: Is your odorless insect spray really odorless?|http://www.philstar.com/science-and-technology/746002/fighting-dengue-your-odorless-insect-spray-really-odorless",
+        "Rizal barangay joins Racumin's RatAttack project.|http://www.philstar.com/science-and-technology/601473/rizal-barangay-joins-racumins-ratattack-project",
+        "Eliminate rats, stop Leptospirosis.|http://www.philstar.com/science-and-technology/526392/eliminate-rats-stop-leptospirosis",
+        "RatAttack goes to San Juan.|http://www.philstar.com:8080/science-and-technology/503439/racumin-ratattack-goes-san-juan",
+        "Floods keep rats 'at home’, people in danger.|http://www.philstar.com/science-and-technology/482513/floods-keep-rats-home-people-danger",
+        "A smart way to get rid of rats.|http://www.philstar.com/science-and-technology/48509/smart-way-get-rid-rats",
+        "Filipino consumers turn to trusted brand in insect control.|http://www.philstar.com/business-usual/17625/filipino-consumers-turn-trusted-brand-insect-control",
+        "Rainy season brings back Leptospirosis.|http://www.philstar.com/science-and-technology/6711/rainy-season-brings-back-leptospirosis"
+    };
+
 }
 @section styles{
     <style type="text/css">
+        .nm-news {
+            margin-top: 19px;
+            margin-bottom: 19px;
+        }
+        
         .col-lg-10 > header > h1 {
-            font-family: 'BebasKai-NM';
-            font-size: 41px;
-            color: #626161;
-            margin-top:40px;
-            margin-bottom:40px;
-        }
-        .nm-readmore-btn{
-            margin-top:50px;
-            margin-bottom:30px;
-        }
-        .row-fluid{
-            width:90%;
-            margin:0 auto;  
-        } 
-        .row-fluid article {
-            border-bottom: 1px solid #626161;
+            font-family: 'Helvetica-Bold-NM';
+            font-size: 20px;
+            color: #626161;            
+            margin-top:0px;
+
         }
 
-        article{
-            height:auto;
-            overflow:hidden;
+        .nm-readmore-btn {
+            /*margin-top: 50px;
+            margin-bottom: 30px;*/
+            top:0px;
         }
+
+        .row-fluid {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+            .row-fluid article {
+                border-bottom: 1px solid #626161;
+            }
+
+        article {
+            height: auto;
+            overflow: hidden;
+        }
+
         .nm-news-nav {
             background-color: #59e6ff;
-            height:38px;
-            margin-bottom:20px;
+            height: 38px;
+            margin-bottom: 20px;
         }
-        .pagination{
-            margin-top:0px;            
-            height:100%;
+
+        .pagination {
+            margin-top: 0px;
+            height: 100%;
         }
+
             .pagination > li > a {
                 border: none;
                 color: #fff;
                 padding: 8px 12px;
                 background-color: transparent;
                 font-family: 'BebasKai-NM';
-                font-size:15px;
+                font-size: 15px;
             }
+
             .pagination > li:last-child > a {
-                border-top-right-radius:0px;
-                border-bottom-right-radius:0px;
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
             }
-            
-            
-             .row-fluid article:last-child {
-                border-bottom: none;
-            }
+
+
+        .row-fluid article:last-child {
+            border-bottom: none;
+        }
+
         .pagination > li:first-child > a {
             border-top-left-radius: 0px;
-            border-bottom-left-radius:0px;
+            border-bottom-left-radius: 0px;
         }
-    </style>    
+    </style>
 }
 @section scripts{
     <script>
         $('.mnuNews').addClass('active-menu');
     </script>
 }
+
+<div>
+    <img class="img-responsive" src="~/images/carousel/2.png" alt="about banner" />
+    <p>&nbsp;</p>
+</div>
 <div class="row-fluid">
-   
-    <article>
-        <div class="col-lg-10">
-            <header>
-                <h1>Keeping Insect Home Invaders Away – Sans the Unpleasant Odor</h1>
-            </header>            
-        </div>
-        <div class="col-lg-2">
-            <a target="_blank" href="http://www.philstar.com/science-and-technology/707865/keeping-insect-home-invaders-away-sans-unpleasant-odor" class="nm-readmore-btn"></a>
-        </div>
-    </article>  
-    <article>
-        <div class="col-lg-10">
-            <header>
-                <h1>The Smart Way to Get Rid of Rats</h1>
-            </header>
-        </div>
-        <div class="col-lg-2">
-            <a target="_blank" href="http://www.philstar.com:8080/science-and-technology/48509/smart-way-get-rid-rats" class="nm-readmore-btn"></a>
-        </div>
-    </article>  
-    <article>
-        <div class="col-lg-10">
-            <header>
-                <h1>Controlling Fleas and Ticks on your Pet</h1>
-            </header>
-        </div>
-        <div class="col-lg-2">
-            <a target="_blank" href="http://animalhealth.bayer.com/ah/index.html" class="nm-readmore-btn"></a>
-        </div>
-    </article>    
+    @{
+        foreach (var item in news)
+        {
+            var article = item.Split('|');
+            <article class="nm-news">
+                <div class="col-lg-10">
+                    <header>
+                        <h1>@article[0]</h1>
+                    </header>
+                </div>
+                <div class="col-lg-2">
+                    <a target="_blank" href="@article[1]" class="nm-readmore-btn"></a>
+                </div>
+            </article>
+        }
+    }
 </div>
 <div class="clearfix"></div>
