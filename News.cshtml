@@ -5,17 +5,23 @@
     var news = new List<string>()
     {
         "Deadly Leptospirosis and other rat-borne diseases: A community fights back|http://www.philstar.com/science-and-technology/2012/08/16/838601/deadly-leptospirosis-and-other-rat-borne-diseases-community ",
-        "RatAttack goes to Davao City barangay.|http://www.philstar.com/science-and-technology/2012/10/11/858162/ratattack-goes-davao-city-barangay",
+        "RatAttack goes to Davao City barangay|http://www.philstar.com/science-and-technology/2012/10/11/858162/ratattack-goes-davao-city-barangay",
         "Fighting dengue: Is your odorless insect spray really odorless?|http://www.philstar.com/science-and-technology/746002/fighting-dengue-your-odorless-insect-spray-really-odorless",
-        "Rizal barangay joins Racumin's RatAttack project.|http://www.philstar.com/science-and-technology/601473/rizal-barangay-joins-racumins-ratattack-project",
-        "Eliminate rats, stop Leptospirosis.|http://www.philstar.com/science-and-technology/526392/eliminate-rats-stop-leptospirosis",
-        "RatAttack goes to San Juan.|http://www.philstar.com:8080/science-and-technology/503439/racumin-ratattack-goes-san-juan",
-        "Floods keep rats 'at home’, people in danger.|http://www.philstar.com/science-and-technology/482513/floods-keep-rats-home-people-danger",
-        "A smart way to get rid of rats.|http://www.philstar.com/science-and-technology/48509/smart-way-get-rid-rats",
-        "Filipino consumers turn to trusted brand in insect control.|http://www.philstar.com/business-usual/17625/filipino-consumers-turn-trusted-brand-insect-control",
-        "Rainy season brings back Leptospirosis.|http://www.philstar.com/science-and-technology/6711/rainy-season-brings-back-leptospirosis"
+        "Keeping Insect Home Invaders Away - Sans the Unpleasant Odor|http://www.philstar.com/science-and-technology/707865/keeping-insect-home-invaders-away-sans-unpleasant-odor",
+        "Rizal barangay joins Racumin's RatAttack project|http://www.philstar.com/science-and-technology/601473/rizal-barangay-joins-racumins-ratattack-project",
+        "Eliminate rats, stop Leptospirosis|http://www.philstar.com/science-and-technology/526392/eliminate-rats-stop-leptospirosis",
+        "RatAttack goes to San Juan|http://www.philstar.com:8080/science-and-technology/503439/racumin-ratattack-goes-san-juan",
+        "Floods keep rats 'at home, people in danger|http://www.philstar.com/science-and-technology/482513/floods-keep-rats-home-people-danger",
+        "A smart way to get rid of rats|http://www.philstar.com/science-and-technology/48509/smart-way-get-rid-rats",
+        "Filipino consumers turn to trusted brand in insect control|http://www.philstar.com/business-usual/17625/filipino-consumers-turn-trusted-brand-insect-control",
+        "Rainy season brings back Leptospirosis|http://www.philstar.com/science-and-technology/6711/rainy-season-brings-back-leptospirosis"
     };
-
+    var selectedNews = Request.QueryString["id"];
+    var selectedNewsID = 0;
+    if (selectedNews != null)
+    {
+        selectedNewsID = Convert.ToInt32(selectedNews);
+    }
 }
 @section styles{
     <style type="text/css">
@@ -90,6 +96,7 @@
 @section scripts{
     <script>
         $('.mnuNews').addClass('active-menu');
+        $('#news' + @selectedNewsID).css('color','#000');
     </script>
 }
 
@@ -135,19 +142,22 @@
 </article>
 <div class="row-fluid">
     @{
+        var ctr = 1;
         foreach (var item in news)
         {
             var article = item.Split('|');
+            var newsID = "news" + ctr;
             <article class="nm-news">
                 <div class="col-lg-10">
                     <header>
-                        <h1>@article[0]</h1>
+                        <h1 id="@newsID">@article[0]</h1>
                     </header>
                 </div>
                 <div class="col-lg-2">
                     <a target="_blank" href="@article[1]" class="nm-readmore-btn"></a>
                 </div>
             </article>
+            ctr++;
         }
     }
 </div>

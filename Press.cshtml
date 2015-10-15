@@ -12,40 +12,10 @@
     };
     List<string> lstOOH = new List<string>()
     {
-        "Advanced Mosquito Killer Billboard-NLEX.jpg|",
+        "Advanced Multi- Insect Killer _School_ Bus Ad.png|",
         "Advanced Multi-Insect Killer _Hotel_ Bus Ad.png|",
         "Advanced Multi Insect Killer _Resto_ Bus Ad.png|",
-        "Advanced Multi- Insect Killer _School_ Bus Ad.png|"
-    };
-    List<string> lstEvent = new List<string>()
-    {
-        "Davao1.jpg|",
-        "Davao2.jpg|",
-        "Davao3.jpg|",
-        "Davao4.jpg|",
-        "Davao5.jpg|",
-        "Mandaluyong.jpg|",
-        "Marikina.jpg|",
-        "Olongapo 2.jpg|",
-        "Pampanga.jpg|",
-        "23820_105809079444172_6914377_n.jpg|",
-        "DSC02605.JPG|",
-        "DSC02610.JPG|",
-        "DSCF0874.JPG|",
-        "DSCF0888.JPG|",
-        "DSCF0911.JPG|",
-        "DSCN1885.JPG|",
-        "DSCN1886.JPG|",
-        "DSCN1902.JPG|",
-        "DSCN1914.JPG|",
-        "DSCN1934.JPG|",
-        "DSCN1943.JPG|",
-        "DSCN1997.JPG|",
-        "IMG_6012.JPG|",
-        "IMG_6049.JPG|",
-        "Ratattack Aug 2014 (33).JPG|",
-        "Ratattack Aug 2014 (72).jpg|",
-        "Ratattack Aug 2014 (8).jpg|"
+        "Advanced Mosquito Killer Billboard-NLEX.jpg|"
     };
 }
 @section styles{
@@ -191,14 +161,13 @@
                 <div role="tabpanel" class="tab-pane" id="event">
                     <div class="nm-pr col-xs-6 col-md-3" data-figure="RATATTACK CAMPAIGN"
                          data-description="RatAttack is a community-based information drive on the health risks caused by rodent infestations. It aims to teach the community in selected barangays nationwide about the dangers of rat infestation and the three Cs on how to control rat population—Commitment, Continuous, and Community Involvement.">
-                        <img src="images/press/event/ratatackevent/Racumin Ratatack Event.jpg" />
+                        <img src="images/press/event/ratatackevent/1.jpg" />
                     </div>
                     @{
-                        foreach (var item in lstEvent)
+                        for (int i = 2; i <= 24; i++)
                         {
-                            var data = item.Split('|');
-                            var path = "images/press/event/ratatackevent/" + data[0];
-                            <div class="nm-pr col-xs-6 col-md-3" data-figure="@data[1]">
+                            var path = "images/press/event/ratatackevent/" + i.ToString() + ".jpg";
+                            <div class="nm-pr col-xs-6 col-md-3" data-figure="">
                                 <img src="@path" />
                             </div>
                         }
