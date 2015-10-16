@@ -20,14 +20,14 @@
     productPETC.Add(new string[] { "4", "/images/products/petc4.png", "BAYOPET<sup>®</sup> TICK & FLEA COLLAR", "Bayopet<sup>®</sup> Tick & Flea Collar with Propoxur is anti-parasitic and is effective in preventing reinfestation of ticks and fleas within 24 hours. It helps your dog stay flea- and tick-free for up to 10 weeks.<br/><br/><small>Size: 70 cm</small>" });
 
     List<string[]> productPETCS = new List<string[]>();
-    productPETCS.Add(new string[] { "1", "/images/products/petcs1.png", "BAYOPET<sup>®</sup> SOAP <br/>CLEAN N’ SHINE", "Bayopet Clean n’ Shine Organic Soap contains jojoba oil and<br/> D-panthenol that gently cleans your dog’s coat, leaving it soft, smooth and tangle-free. It helps maintain a healthy and glossy fur for more fun cuddles and play time.<br/><br/><small>Size: 90 grams</small>" });
+    productPETCS.Add(new string[] { "1", "/images/products/petcs1.png", "BAYOPET<sup>®</sup> SOAP <br/>CLEAN N’ SHINE", "Bayopet Clean n’ Shine Organic Soap contains jojoba oil and<br/> D-Panthenol that gently cleans your dog’s coat, leaving it soft, smooth and tangle-free. It helps maintain a healthy and glossy fur for more fun cuddles and play time.<br/><br/><small>Size: 90 grams</small>" });
     productPETCS.Add(new string[] { "2", "/images/products/petcs2.png", "BAYOPET<sup>®</sup> SOAP <br/>COCONUT MILK", "Bayopet<sup>®</sup> Coconut Milk Soap has tea tree oil and coconut milk that helps heal and soothe dry skin irritations while refreshing and restoring the natural coat of your dog. No more itchy worries for your pet.<br/><br/><small>Size: 90 grams</small>" });
     productPETCS.Add(new string[] { "3", "/images/products/petcs3.png", "BAYOPET<sup>®</sup> SOAP <br/>ALOE VERA", "Bayopet<sup>®</sup> Aloe Vera helps promote hair growth, leaving your dog’s coat thick and silky with a fresh-smelling balsam scent. No more of that sweaty dog smell.<br/><br/><small>Size: 90 grams</small>" });
 
     List<string[]> productPETCVSH = new List<string[]>();
-    productPETCVSH.Add(new string[] { "1", "/images/products/petcsh1.png", "BAYOPET<sup>®</sup> SHAMPOO <br/>CONDITIONING", "Bayopet<sup>®</sup> Conditioning Shampoo is a mild shampoo and conditioner formula with apple fragrance that contains jojoba oil and D-panthenol. It helps soften your dog’s coat from head to tail, making it smooth, tangle-free and smelling fresh.<br/><br/><small>Size: 275 mL</small>" });
+    productPETCVSH.Add(new string[] { "1", "/images/products/petcsh1.png", "BAYOPET<sup>®</sup> SHAMPOO <br/>CONDITIONING", "Bayopet<sup>®</sup> Conditioning Shampoo is a mild shampoo and conditioner formula with apple fragrance that contains jojoba oil and    D-Panthenol. It helps soften your dog’s coat from head to tail, making it smooth, tangle-free and smelling fresh.<br/><br/><small>Size: 275 mL</small>" });
     productPETCVSH.Add(new string[] { "2", "/images/products/petcsh2.png", "BAYOPET<sup>®</sup> SHAMPOO <br/>HAIR GROWER", "Bayopet<sup>®</sup> Herbal Hair Grower Shampoo is an all-natural mild shampoo and conditioner formula with aloe vera extract that promotes hair growth and maintains your dog’s silky coat. It also works for limp coats by making them thick and full while relieving discomfort of dry and itchy skin.<br/><br/><small>Size: 275 mL</small>" });
-    productPETCVSH.Add(new string[] { "3", "/images/products/petcsh3.png", "BAYOPET<sup>®</sup> MOISTURIZING <br/> <text style=\"font-weight:34px\">AND ANTISEPTIC SHAMPOO </text>", "Bayopet<sup>®</sup> Moisturizing and Antiseptic Shampoo is recommended for pets with dry, sensitive skin. It is a mild shampoo formula infused with the moisturizing properties of coconut milk. It also has the antiseptic properties of tea tree oil that restores your dog’s natural coat oil, and relieves skin irritation.<br/><br/><small>Size: 275 mL</small>" });
+    productPETCVSH.Add(new string[] { "3", "/images/products/petcsh3.png", "BAYOPET<sup>®</sup> MOISTURIZING <br/> <text style=\"font-weight:34px\">& ANTISEPTIC SHAMPOO </text>", "Bayopet<sup>®</sup> Moisturizing & Antiseptic Shampoo is recommended for pets with dry, sensitive skin. It is a mild shampoo formula infused with the moisturizing properties of coconut milk. It also has the antiseptic properties of tea tree oil that restores your dog’s natural coat oil, and relieves skin irritation.<br/><br/><small>Size: 275 mL</small>" });
 }
 @section styles{
     <style type="text/css">
@@ -96,6 +96,10 @@
                 $(this).parent().children(".collapse.in").removeClass("in");
             });
         });
+
+        function closeCollapse() {
+            $("#productsItems").children(".collapse.in").removeClass("in");
+        }
     </script>
 
 }
@@ -112,7 +116,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1"><b>INSECT CONTROL</b></a>
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" onclick="closeCollapse();"><b>INSECT CONTROL</b></a>
                         </h4>
                     </div>
                     <div id="collapse1" class="panel-collapse collapse">
@@ -128,7 +132,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2"><b>RODENT CONTROL</b></a>
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" onclick="closeCollapse();"><b>RODENT CONTROL</b></a>
                         </h4>
                     </div>
                     <div id="collapse2" class="panel-collapse collapse">
@@ -142,7 +146,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse3"><b>PET CARE</b></a>
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" onclick="closeCollapse();"><b>PET CARE</b></a>
                         </h4>
                     </div>
                     <div id="collapse3" class="panel-collapse collapse">
