@@ -66,6 +66,11 @@
             $('.nav-pills a').click(function (e) {
                 e.preventDefault();
                 $(this).tab('show');
+                $('#nm-iframe').attr('src', '');
+                $('.nm-yt').find("> figcaption > header > h2").text('');
+                $('.nm-prprint').find("> div > img").attr('src', '');
+                $('.nm-prprint').find("> figcaption > p").html('');
+                $('.nm-prprint').find("> figcaption > header > h2").text('');
             });
             $('.nm-tvc').click(function (e) {
                 e.preventDefault();
