@@ -167,6 +167,10 @@
                     @{
                         for (int i = 2; i <= 24; i++)
                         {
+                            if(i==7 || i==10 || i == 17)
+                            {
+                                continue;
+                            }
                             var path = "images/press/event/ratatackevent/" + i.ToString() + ".jpg";
                             <div class="nm-pr col-xs-6 col-md-3" data-figure="">
                                 <img src="@path" />
