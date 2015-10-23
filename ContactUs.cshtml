@@ -8,15 +8,26 @@
     {
         try
         {
-            WebMail.Send("customercare@neumann.com.ph", txtSubject, "From: " + txtName + " (" + txtEmail + ")" + "<br><br>" + txtMessage, "test.nmpi@helpdesk.ph", null, null, true);
-            <div class="alert alert-success">
-                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                <strong>Successful!</strong> The request has been sent succesfully.
-            </div>
-            txtName = "";
-            txtSubject = "";
-            txtMessage = "";
-            txtEmail = "";
+            if (txtName == "" || txtSubject == "" || txtMessage == "" || txtEmail == "")
+            {
+                <div class="alert alert-danger">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Failed!</strong> Fields can't be blank
+                </div>
+            }
+            else
+            {
+                WebMail.Send("customercare@neumann.com.ph", txtSubject, "From: " + txtName + " (" + txtEmail + ")" + "<br><br>" + txtMessage, "test.nmpi@helpdesk.ph", null, null, true);
+                <div class="alert alert-success">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Successful!</strong> The request has been sent succesfully.
+                </div>
+                txtName = "";
+                txtSubject = "";
+                txtMessage = "";
+                txtEmail = "";
+            }
+
         }
         catch (Exception ex)
         {
