@@ -12,14 +12,16 @@
 
     <link href="~/layout/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/layout/css/style.css" rel="stylesheet" />
-    @RenderSection("styles",false)
+    @RenderSection("styles", false)
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="~/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="~/favicon.ico" type="image/x-icon">
 </head>
 <body class="nm">
     <div class="nm-container container">
         <header class="nm-header">
             <nav class="navbar navbar-default">
-                <div class="container-fluid">                
+                <div class="container-fluid">
                     <div class="navbar-header navbar-left">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                             <span class="sr-only">Toggle navigation</span>
@@ -35,15 +37,15 @@
                         </a>
                     </div>
 
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">                       
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right nm-nav hidden-xs">
                             <li><a class="mnuHome" href="~/">Home</a></li>
                             <li><a class="mnuAbout" href="~/AboutUs.cshtml">About</a></li>
                             <li><a class="mnuProduct" href="~/Products.cshtml">Products</a></li>
                             <li><a class="mnuPress" href="~/Press.cshtml">Press</a></li>
                             <li><a class="mnuNews" href="~/News.cshtml">News</a></li>
-                            <li><a class="mnuContact" href="~/ContactUs.cshtml">Contact us</a></li>        
-                        </ul>  
+                            <li><a class="mnuContact" href="~/ContactUs.cshtml">Contact us</a></li>
+                        </ul>
                         <ul class="nav navbar-nav navbar-right visible-xs">
                             <li><a class="mnuHome" href="~/">Home</a></li>
                             <li><a class="mnuAbout" href="~/AboutUs.cshtml">About</a></li>
@@ -51,19 +53,29 @@
                             <li><a class="mnuPress" href="~/Press.cshtml">Press</a></li>
                             <li><a class="mnuNews" href="~/News.cshtml">News</a></li>
                             <li><a class="mnuContact" href="~/ContactUs.cshtml">Contact us</a></li>
-                        </ul>          
+                        </ul>
                     </div>
                 </div>
             </nav>
         </header>
         <section>
-            @RenderBody()            
+            @RenderBody()
         </section>
-        
+
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="~/scripts/bootstrap.min.js"></script>
     <script>
+        //(function (i, s, o, g, r, a, m) {
+        //    i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        //        (i[r].q = i[r].q || []).push(arguments)
+        //    }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        //    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        //})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        //ga('create', 'UA-67010566-1', 'auto');
+        //ga('send', 'pageview');
+
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
                 (i[r].q = i[r].q || []).push(arguments)
@@ -71,10 +83,13 @@
             m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
         })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-        ga('create', 'UA-67010566-1', 'auto');
+        ga('create', 'UA-67010566-2', 'auto');
         ga('send', 'pageview');
 
     </script>
-    @RenderSection("scripts",false)
+
+
+
+    @RenderSection("scripts", false)
 </body>
 </html>
