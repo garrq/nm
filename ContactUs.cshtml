@@ -17,7 +17,7 @@
             }
             else
             {
-                WebMail.Send("customercare@neumann.com.ph", txtSubject, "From: " + txtName + " (" + txtEmail + ")" + "<br><br>" + txtMessage, "test.nmpi@helpdesk.ph", null, null, true);
+                WebMail.Send("customercare@neumann.com.ph", txtSubject, "From: " + txtName + " (" + txtEmail + ")" + "<br><br>" + txtMessage, txtEmail, null, null, true);
                 <div class="alert alert-success">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                     <strong>Successful!</strong> The request has been sent succesfully.
