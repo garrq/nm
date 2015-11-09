@@ -69,6 +69,9 @@
                 $('.nm-preview').hide();
                 $('.nm-prprint').hide();
                 $('.nm-yt').hide();
+                var clickedID = $(this)[0].hash;
+                var clickedClass = $(clickedID).children('div').attr('class').split(' ')[0];
+                $(clickedID + ' .' + clickedClass).eq(0).click();
             });
             $('.nm-tvc').click(function (e) {
                 e.preventDefault();
@@ -77,7 +80,7 @@
                 var id = $(this).data('video');
                 var title = $(this).children('input[type="hidden"]').val();
                 $('.nm-yt').find("> figcaption > header > h2").text(title);
-                $('#nm-iframe').attr('src', 'https://www.youtube.com/embed/' + id);
+                $('#nm-iframe').attr('src', 'https://www.youtube.com/embed/' + id);                
             });
             $('.nm-pr').click(function (e) {
                 e.preventDefault();
