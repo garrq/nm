@@ -7,15 +7,29 @@
     </script>
 
 }
+
 @section styles{
-	.row-fluid.visible-sm.visible-xs div article .nm-home-article a{
-		display: inline-block;
-		width: 50px;
-		top: -21px;
-		float: right;
-		position: relative;
-		margin-right: 3px;
-	}
+    <style type="text/css">
+        .visible-xs > div > article > div > a > img{
+            width: 100%;
+        }
+        .visible-xs > div > article > div{
+            position:relative;
+            margin-bottom: 20px;
+        }
+         .visible-xs > div > article > div > a {
+            display: block;
+            top: 70%;
+            margin-right: 3px;
+            width: 20%;
+            float: right;
+            position: absolute;
+            right: 2px;
+        }
+        .visible-sm > div > article > div > a {
+            top: 75%;
+        }
+    </style>    
 }
 <article id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -57,13 +71,13 @@
 <div style="width:100%;height:50px;">
 
 </div>
-<div class="row-fluid visible-md">
+<div class="row-fluid visible-md visible-lg">
     <div style="width:92%;height:auto;margin:0 auto;">
         <article class="col-md-4">
-            <div class="nm-home-article">  
+            <div class="nm-home-article">
                 <div>
                     <img src="~/images/home-tab1.png" />
-                </div>              
+                </div>
                 <a target="_blank" href="~/News.cshtml?id=4" class="nm-readmore-btn"></a>
             </div>
         </article>
@@ -83,9 +97,9 @@
                 <a target="_blank" href="https://www.facebook.com/bayopetph/timeline" class="nm-readmore-btn"></a>
             </div>
         </article>
-    </div> 
+    </div>
 </div>
-<div class="row-fluid visible-sm visible-xs">
+<div class="row-fluid visible-xs visible-sm">
     <div style="width:70%;height:auto;margin:0 auto;">
         <article class="col-sm-4">
             <div class="nm-home-article">
@@ -93,8 +107,8 @@
                     <img src="~/images/home-tab1.png" />
                 </div>
                 <a target="_blank" href="~/News.cshtml?id=4">
-					<img src="../../images/readmore-button.png" />
-				</a>
+                    <img src="../../images/readmore-button.png" />
+                </a>
             </div>
         </article>
         <article class="col-sm-4">
@@ -102,7 +116,9 @@
                 <div>
                     <img src="~/images/home-tab2.png" />
                 </div>
-                <a target="_blank" href="~/News.cshtml?id=9" class="nm-readmore-btn"></a>
+                <a target="_blank" href="~/News.cshtml?id=4">
+                    <img src="../../images/readmore-button.png" />
+                </a>
             </div>
         </article>
         <article class="col-sm-4">
@@ -110,7 +126,9 @@
                 <div>
                     <img src="~/images/home-tab3.png" />
                 </div>
-                <a target="_blank" href="https://www.facebook.com/bayopetph/timeline" class="nm-readmore-btn"></a>
+                <a target="_blank" href="~/News.cshtml?id=4">
+                    <img src="../../images/readmore-button.png" />
+                </a>
             </div>
         </article>
     </div>
